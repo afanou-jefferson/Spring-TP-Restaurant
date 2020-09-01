@@ -1,4 +1,4 @@
-package dev.dao;
+package dev.service;
 
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -11,6 +11,7 @@ import org.mockito.Mockito;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import dev.dao.IPlatDao;
 import dev.exception.PlatException;
 import dev.service.PlatServiceVersion1;
 
