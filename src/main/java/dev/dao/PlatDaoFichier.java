@@ -3,6 +3,7 @@ package dev.dao;
 import dev.entite.Plat;
 import dev.exception.PlatException;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -24,7 +25,7 @@ public class PlatDaoFichier implements IPlatDao {
     private String fichierStockage;
 
     // On renseigne le chemin du fichier de stockage
-    public PlatDaoFichier( @Value("${fichier.chemin}") String fichierStockage) {
+    public PlatDaoFichier( @Value("${chemin.fichier}") String fichierStockage) {
         this.fichierStockage = fichierStockage;
         if (!Files.exists(Paths.get(this.fichierStockage))) {
             try {
@@ -44,6 +45,7 @@ public class PlatDaoFichier implements IPlatDao {
                         return new Plat(strings[0], Integer.valueOf(strings[1]));
                     })
                     .collect(toList());
+            
         } catch (IOException e) {
             throw new PlatException("fichier non trouvé " + fichierStockage);
         }
