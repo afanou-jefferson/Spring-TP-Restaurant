@@ -21,14 +21,24 @@ class PlatDaoMemoireTest {
 	@Test
 	void listerPlatsVideALInitialisation() {
 		List<Plat> resultat = platDaoMemoire.listerPlats();
-		assertThat(resultat.size() == 0);	
+		assertThat(resultat.size()).isEqualTo(0);
+		assertThat(resultat.isEmpty());
 	}
 
 	// TODO
 	@Test
 	void ajouterPlatCasPassants() {
+		
+		List<Plat> resultatAvant = platDaoMemoire.listerPlats();
+		int sizeAvant = resultatAvant.size();
+		
 		platDaoMemoire.ajouterPlat("Test1", 100000);
-		List<Plat> resultat = platDaoMemoire.listerPlats();
-		assertThat(resultat.get(resultat.size()).getNom().equals("Test1"));	// On check que le dernier plat ajouté correspont à notre plats ajoutés
+		
+		List<Plat> resultatApres = platDaoMemoire.listerPlats();
+		
+		int sizeApres = resultatApres.size();
+		assertThat(sizeAvant<sizeApres);
+		
+		assertThat(resultatApres.get(resultatApres.size()-1).getNom().equals("Test1"));	// On check que le dernier plat ajouté correspont à notre plats ajoutés
 	}
 }
