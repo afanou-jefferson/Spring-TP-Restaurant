@@ -17,7 +17,9 @@
 	<build>
 		<plugins>
 			<plugin>
-				<artifactId>maven-surefire-plugin</artifactId> <!-- Permet de mettre à jour le plugin Maven Surfire pour les supports JUnit 5 -->)
+				<artifactId>maven-surefire-plugin</artifactId> <!-- Permet de mettre à jour le plugin Maven Surfire pour les supports JUnit 
+					5 -->
+				)
 				<version>2.22.2</version>
 			</plugin>
 		</plugins>
@@ -46,11 +48,17 @@
 			<artifactId>junit-jupiter</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.assertj</groupId>
 			<artifactId>assertj-core</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>2.8.47</version>
 		</dependency>
 
 	</dependencies>
