@@ -14,8 +14,7 @@ import dev.entite.Plat;
 @SpringJUnitConfig(PlatDaoFichier.class) // créer un contexte Spring avec un bean de type dev.dao.PlatDaoFichier
 @TestPropertySource("classpath:test.properties") // déclare le profil à activer
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD) // Reset le context après chaque appel de la méthode test
-//Le context n'est pas reset à chaque fois, pourquoi ? Ask Rossi
-// Cela semble logique qu'il ne soit pas reset puisque la fonction ajouterplat est censé écrire directement dans le fichier
+
 public class PlatDaoFichierTest {
 
 	@Autowired // Instancie "auto" une instance, gerée par Spring

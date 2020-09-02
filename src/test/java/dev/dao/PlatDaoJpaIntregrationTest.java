@@ -11,12 +11,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import dev.config.JdbcTestConfig;
 import dev.config.JpaConfig;
 
-@SpringJUnitConfig({ JpaConfig.class })
+@SpringJUnitConfig({ JpaConfig.class, PlatDaoJpa.class })
 @ActiveProfiles({ "jpa", "service1" })
 public class PlatDaoJpaIntregrationTest {
 
 	@Autowired
 	private PlatDaoJpa dao;
+	//Bean named 'platDaoJpa' is expected to be of type 'dev.dao.PlatDaoJpa' but was actually of type 'com.sun.proxy.$Proxy49' , ask Rossi
 
 	@Test
 	public void listerPlatsNonVideTest() {

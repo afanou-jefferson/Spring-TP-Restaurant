@@ -24,8 +24,8 @@ public class PlatDaoFichier implements IPlatDao {
 
     private String fichierStockage;
 
-    // On renseigne le chemin du fichier de stockage
-    public PlatDaoFichier( @Value("${chemin.fichier}") String fichierStockage) {
+    // On renseigne le chemin du fichier de stockage , ici fichier.stockage car fichier dynamique pour les tests donc fonctionne w/ DirtyContext
+    public PlatDaoFichier( @Value("${fichier.stockage}") String fichierStockage) {
         this.fichierStockage = fichierStockage;
         if (!Files.exists(Paths.get(this.fichierStockage))) {
             try {

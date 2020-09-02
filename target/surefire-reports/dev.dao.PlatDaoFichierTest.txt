@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: dev.dao.PlatDaoJpaIntegrationTest
+Test set: dev.dao.PlatDaoFichierTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.154 s - in dev.dao.PlatDaoJpaIntegrationTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.288 s - in dev.dao.PlatDaoFichierTest

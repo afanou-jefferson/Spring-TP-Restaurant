@@ -6,6 +6,7 @@ import javax.sql.DataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -16,8 +17,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @PropertySource("app.properties")
-@ComponentScan({"dev"})
-@EnableTransactionManagement(proxyTargetClass = true) // https://stackoverflow.com/questions/52603759/beannotofrequiredtypeexception-bean-named-x-is-expected-to-be-of-type-x-but-was
+@Import({DataSourceConfig.class})
+@EnableTransactionManagement // https://stackoverflow.com/questions/52603759/beannotofrequiredtypeexception-bean-named-x-is-expected-to-be-of-type-x-but-was
 public class JpaConfig {
 
 	 // Configuration de l'EntityManagerFactory
