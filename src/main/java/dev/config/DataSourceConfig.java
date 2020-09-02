@@ -10,7 +10,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 @Configuration
 public class DataSourceConfig {
 	
-	// On instancie dans config le bean DataSource car on ne peut pas l'annoter dans la bibiothqèe javax.sql.DataSource
+	// On instancie dans config le bean DataSource car on ne peut pas l'annoter dans la bibiothèque javax.sql.DataSource
 	@Bean 
 	public DataSource dataSource(@Value("${bdd.driver}") String driver, @Value("${bdd.user}") String utilisateur,
 			@Value("${bdd.pass}") String motDePasse, @Value("${bdd.url}") String url) {
