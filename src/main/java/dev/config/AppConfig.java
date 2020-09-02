@@ -1,4 +1,4 @@
-package config;
+package dev.config;
 
 import java.util.Scanner;
 
@@ -14,7 +14,6 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("app.properties")
 public class AppConfig {
 
-	
 	// constructeur de bean car classe particulière comme on ne peut pas toucher au JDK pour ajouter les annotation
 	@Bean
 	public Scanner scanner() {

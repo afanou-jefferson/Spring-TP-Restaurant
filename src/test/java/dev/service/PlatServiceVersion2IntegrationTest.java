@@ -11,7 +11,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import config.AppConfig;
+import dev.config.AppConfig;
 import dev.exception.PlatException;
 
 @ExtendWith(SpringExtension.class)

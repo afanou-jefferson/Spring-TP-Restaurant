@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import config.AppConfig;
+import dev.config.AppConfig;
 import dev.ihm.Menu;
 
 public class AppSpringJava {

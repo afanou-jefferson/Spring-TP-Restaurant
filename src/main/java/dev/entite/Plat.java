@@ -43,4 +43,5 @@ public class Plat {
     public int hashCode() {
         return Objects.hash(nom);
     }
+
 }
